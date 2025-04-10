@@ -9,7 +9,6 @@ import { NgStyle } from '@angular/common';
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    NgStyle
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
