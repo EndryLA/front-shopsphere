@@ -1,0 +1,17 @@
+<header>
+    <img src="https://placehold.co/400" alt="logo" class="logo">
+    <nav>
+        <ul>
+            <li routerLink="">Link 1</li>
+            <li routerLink="">Link 2</li>
+            <li routerLink="">Link 3</li>
+            <li routerLink="connexion">
+                @if (isLogedIn) {
+                    <button class="btn btn-medium btn-primary" (click)="logout()">Déconnexion</button>
+                } @else {
+                    <button class="btn btn-medium btn-primary">Se connecter</button>
+                }
+            </li>
+        </ul>
+    </nav>
+</header>
