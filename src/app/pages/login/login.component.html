@@ -1,0 +1,27 @@
+<div class="login-container">
+    <h1>Connexion</h1>
+    <form action="" [formGroup]="formData" (submit)="login()">
+        <div  class="form-field"  >
+            <label for="email">Adresse mail</label>
+            <input name="password" type="email" required formControlName="email">
+        </div>
+        
+        <div class="form-field">
+            <label for="password">Mot de passe</label>
+            <input name="password" type="password" required formControlName="password">
+        </div>
+        
+        <button class="btn btn-primary btn-medium" type="submit" [disabled] = "isLoading">Se connecter</button>
+    </form>
+
+    @if (errors.length > 0) {
+
+        <div class="errors-container">
+            @for(error of errors; track $index) {
+                <p>{{error}}</p>
+            }
+        </div>
+
+    }
+
+</div>
