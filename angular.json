@@ -32,7 +32,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/shared/styles/buttons.scss",
+              "src/app/shared/styles/forms.scss"
             ],
             "scripts": []
           },

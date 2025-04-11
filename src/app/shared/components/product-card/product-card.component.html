@@ -3,8 +3,8 @@
     <div class="product-info">
         <h3 class="title">{{product.name}}</h3>
         <p class="info">{{product.mainSpecs}}</p>
-        <p class="rating"><app-rating-display [rating]="product.rating"/> {{product.rating}}/5 ({{product.totalReviews}})</p>
-        <p class="price">{{product.price}}</p>
+        <p class="rating"><app-rating-display [rating]="product.averageRating"/> {{product.averageRating}}/5</p>
+        <p class="price">{{product.price}}€</p>
 
     </div>
 </article>

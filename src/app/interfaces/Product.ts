@@ -9,7 +9,7 @@ export interface Product {
     mainSpecs:String,
     price:number,
     productCategory:productCategory,
-    quantity:ProductInventory,
-    rating:number,
+    inventory:ProductInventory,
+    averageRating:number,
     totalReviews?:number
 }

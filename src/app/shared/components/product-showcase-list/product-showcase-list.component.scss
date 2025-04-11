@@ -1,0 +1,47 @@
+.upper-section {
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 8px;
+
+  h2 {
+      padding-left:8px;
+  }
+  
+  .btn-container {
+    display:flex;
+    gap:8px;
+  }
+}
+
+
+.product-slider {
+    //max-width is obtained taking product-card:width * number of elements + swiper-slide:horizontal-padding * number of elements
+    max-width: 1184px;
+    margin: 0 auto;
+    overflow: visible;
+    background-color: white;
+
+  }
+  
+  swiper-container {
+    width: 100%;
+    overflow:visible;
+  }
+  
+  swiper-slide {
+    max-width:280px;
+    border-radius:10px;
+    transition: transform 0.3s;
+    padding:20px 8px;
+    
+  }
+
+  
+  app-product-card {
+    width: 280px;
+    height: 100%;
+    display: block;
+  }
+  
