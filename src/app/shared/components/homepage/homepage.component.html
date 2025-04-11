@@ -1,0 +1,24 @@
+
+<section class="flex-container">
+    
+    <app-product-showcase-list title="Nouveautés"/>
+    
+    <section class="category-section">
+
+        <h2>Meilleures ventes</h2>
+
+        <div class="category-container">
+            @for(imageObject of imagesObject; track $index){
+                <div class="category-card">
+                    <img src="/assets/images/{{imageObject.filename}}" alt="{{imageObject.title}}">
+                    <h3>{{imageObject.title}}</h3>
+                </div>
+            }
+        </div>
+        
+    </section>
+
+    <app-product-showcase-list title="Recommandé pour vous"/>
+
+
+</section>

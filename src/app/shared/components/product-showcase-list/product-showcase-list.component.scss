@@ -18,7 +18,7 @@
 
 .product-slider {
     //max-width is obtained taking product-card:width * number of elements + swiper-slide:horizontal-padding * number of elements
-    max-width: 1184px;
+    max-width: 1248px;
     margin: 0 auto;
     overflow: visible;
     background-color: white;
@@ -34,7 +34,7 @@
     max-width:280px;
     border-radius:10px;
     transition: transform 0.3s;
-    padding:20px 8px;
+    padding:20px 16px;
     
   }
 
