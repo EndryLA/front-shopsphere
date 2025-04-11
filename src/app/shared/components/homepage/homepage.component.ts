@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ProductShowcaseListComponent } from "../product-showcase-list/product-showcase-list.component";
 import { Product } from '../../../interfaces/Product';
 import { ProductService } from '../../../services/products.service';
+import { ProductCardSkeletonComponent } from "../product-card-skeleton/product-card-skeleton.component";
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [ProductShowcaseListComponent],
+  imports: [ProductShowcaseListComponent, ProductCardSkeletonComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
