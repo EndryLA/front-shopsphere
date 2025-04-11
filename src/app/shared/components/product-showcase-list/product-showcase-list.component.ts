@@ -20,6 +20,7 @@ export class ProductShowcaseListComponent implements OnInit{
   
   products!: Product[]
   productService :ProductService = inject(ProductService)
+  @Input({required:true}) title!: string;
 
 
   ngOnInit() :void {

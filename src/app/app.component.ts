@@ -14,7 +14,6 @@ import { ProductShowcaseListComponent } from "./shared/components/product-showca
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
-  title = 'front-shopshere';
 
   products !: Product[]
   productService: ProductService = inject(ProductService)
