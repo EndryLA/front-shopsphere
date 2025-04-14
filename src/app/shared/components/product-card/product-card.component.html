@@ -1,9 +1,9 @@
 <article>
-    <img  src="https://media.ldlc.com/r1600/ld/products/00/03/83/35/LD0003833580_2.jpg"/>
+    <img  src="https://media.ldlc.com/r1600/ld/products/00/03/83/35/LD0003833580_2.jpg" routerLink="/produit/{{product.id}}"/>
     <div class="product-info">
         <h3 class="title">{{product.name}}</h3>
         <p class="info">{{product.mainSpecs}}</p>
-        <p class="rating"><app-rating-display [rating]="product.averageRating"/> {{product.averageRating}}/5</p>
+        <p class="rating"><app-rating-display [rating]="product.averageRating" starSize="small"/> {{product.averageRating}}/5</p>
         <p class="price">{{product.price}}€</p>
 
     </div>

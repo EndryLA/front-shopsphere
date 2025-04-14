@@ -1,5 +1,8 @@
 
-
+body {
+    padding:0;
+    margin:0;
+}
 
 * {
     font-family:'Inter',sans-serif;
@@ -19,9 +22,9 @@ p {
     padding:0;
 }
 
-h3 {
+h1 {
+    font-size:42px;
     margin:0;
-    font-size:18px;
 }
 
 h2 {
@@ -29,3 +32,15 @@ h2 {
     margin:0;
 }
 
+
+h3 {
+    margin:0;
+    font-size:18px;
+}
+
+
+.filter-black {
+    filter:brightness(0);
+}
+
+$gray:#5B5D62;

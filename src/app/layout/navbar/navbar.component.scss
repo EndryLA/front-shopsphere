@@ -4,6 +4,8 @@ header {
     display:flex;
     width:100%;
     justify-content: space-between;
+    padding:8px 16px;
+    box-sizing: border-box;
 }
 
 ul {
@@ -22,4 +24,5 @@ ul {
 
 .logo {
     width:50px;
+    cursor: pointer;
 }

@@ -1,13 +1,17 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ProductShowcaseListComponent } from "../product-showcase-list/product-showcase-list.component";
-import { Product } from '../../../interfaces/Product';
-import { ProductService } from '../../../services/products.service';
-import { ProductCardSkeletonComponent } from "../product-card-skeleton/product-card-skeleton.component";
+import { ProductShowcaseListComponent } from "../../shared/components/product-showcase-list/product-showcase-list.component";
+import { Product } from '../../interfaces/Product';
+import { ProductService } from '../../services/products.service';
+import { ProductCardSkeletonComponent } from "../../shared/components/product-card-skeleton/product-card-skeleton.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [ProductShowcaseListComponent, ProductCardSkeletonComponent],
+  imports: [
+    ProductShowcaseListComponent,
+    RouterLink,
+    ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })

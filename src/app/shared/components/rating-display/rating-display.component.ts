@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -11,6 +12,7 @@ export class RatingDisplayComponent {
 
   @Input() rating: number = 0;
   stars: ('full' | 'half' | 'empty')[] = [];
+  @Input({required:true}) starSize :string = '';
 
   ngOnChanges(): void {
     const full = Math.floor(this.rating);

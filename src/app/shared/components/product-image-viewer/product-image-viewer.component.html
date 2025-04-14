@@ -1,0 +1,39 @@
+<section class="image-viewer">
+    <!-- Desktop view with active image and thumbnails -->
+    <img src="{{apiUrl}}/public/images/{{activeImage}}" 
+         [alt]="'Image of '" 
+         class="active-image">
+
+    <div class="thumbnails-container">
+        <button class="btn btn-swiper" (click)="slidePrev()">
+            <img src="/assets/icons/chevron-left.svg" alt="navigate-left">
+        </button>
+        
+        <swiper-container #swiperContainer id="swiper" loop="false" navigation="false" slides-per-view="auto"> 
+            @for (image of images; track image.id) {
+                <swiper-slide (mouseenter)="setActiveImage(image.id)" (click)="setActiveImage(image.id)" loading="lazy">
+                    <img src="{{apiUrl}}/public/images/{{image.id}}" [alt]="'Image thumbnail ' + ($index + 1)">
+                </swiper-slide>
+            }
+        </swiper-container>
+
+        <button class="btn btn-swiper" (click)="slideNext()">
+            <img src="/assets/icons/chevron-right.svg" alt="navigate-right">
+        </button>
+    </div>
+    
+    <!-- Mobile view with full-width sliding images and bullets -->
+    <div class="mobile-swiper-container">
+        <swiper-container #mobileSwiperContainer 
+                         id="mobile-swiper" 
+                         pagination="true"
+                         slides-per-view="1">
+            @for (image of images; track image.id) {
+                <swiper-slide class="mobile-swiper-slide">
+                    <img src="{{apiUrl}}/public/images/{{image.id}}" 
+                         [alt]="'Product image ' + ($index + 1)">
+                </swiper-slide>
+            }
+        </swiper-container>
+    </div>
+</section>

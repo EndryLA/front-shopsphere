@@ -1,0 +1,56 @@
+<section class="page-wrapper">
+    <app-product-image-viewer [productId]="product.id"/>
+    <section class="info-container">
+        <h1>{{product.name}}</h1>
+        <p class="price">{{product.price}}€</p>
+        <app-rating-display [rating]="product.averageRating" starSize="large"></app-rating-display>
+    
+        <div class="description-section">
+            <h2>Description</h2>
+            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... </p>
+            <button class="btn-read-more">lire la suite <img src="/assets/icons/chevron-right.svg" class="filter-black"/></button>
+        </div>
+    
+        <button class="btn btn-primary btn-xxl">Ajouter au panier</button>
+
+        <div class="specs-section">
+
+            <div class="specs-header">
+                <h2>Caractéristiques techniques</h2>
+                <button class="btn-read-more">voir tout</button>
+            </div>
+
+            <div class="specs-content">
+                <div class="spec">
+                    <div class="spec-key">Couleur</div>
+                    <div class="spec-value">Noir</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-key">Mémoire RAM</div>
+                    <div class="spec-value">4 Go</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-key">Couleur</div>
+                    <div class="spec-value">Noir</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-key">Couleur</div>
+                    <div class="spec-value">Noir</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-key">Couleur</div>
+                    <div class="spec-value">Noir</div>
+                </div>
+                <div class="spec">
+                    <div class="spec-key">Couleur</div>
+                    <div class="spec-value">Noir</div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+
+    </section>
+</section>
