@@ -11,7 +11,6 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [
     ProductShowcaseListComponent,
-    RouterLink,
     NgClass
     ],
   templateUrl: './homepage.component.html',
