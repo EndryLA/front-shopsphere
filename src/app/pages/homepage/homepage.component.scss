@@ -19,6 +19,95 @@ section.flex-container {
     }
 }
 
+
+.newsletter {
+    max-width:800px;
+    margin: 0 auto;
+    background-color: #FBF457;
+    padding:48px 64px;
+    border-radius:12px;
+    display:flex;
+    flex-direction: column;
+    gap:24px;
+
+    .header {
+        p {
+            font-size:18px;
+            font-weight:600;
+            margin-top:4px;
+        }
+    }
+
+    p {
+        font-size:12px;
+    }
+
+    form {
+        display:flex;
+        flex-direction: unset;
+        max-width: unset;
+
+        input {
+            width:400px;
+        }
+    }
+}
+
+.faq {
+    width:90%;
+    max-width: 928px;
+    margin: 0 auto;
+
+    h2 {
+        margin-bottom: 32px;
+    }
+}
+
+.faq-element {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+    border-radius:8px;
+    padding: 8px;
+    transition: background-color 0.2s ease; 
+
+    &:hover {
+        background-color: rgba(238, 238, 238, 0.7);
+    }
+
+    .faq-question {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h3 {
+        font-size:22px;
+    }
+}
+
+.faq-container {
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+
+.faq-answer {
+    transition: max-height 0.4s ease;
+  }
+  
+  .faq-answer.expanded {
+    max-height: 500px; 
+  }
+
+.collapsed {
+    height:0;
+    font-size:0;
+}
+
+
 .category-container {
     margin:0 auto;
     display:flex;

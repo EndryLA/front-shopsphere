@@ -1,5 +1,4 @@
 <section class="flex-container">
-    
     <app-product-showcase-list title="Nouveautés"/>
     
     <section class="category-section">
@@ -19,5 +18,34 @@
 
     <app-product-showcase-list title="Recommandé pour vous"/>
 
+    <section class="newsletter">
+        <div class="header">
+            <h2>10% de remise sur votre premier achat !</h2>
+            <p>Pour tout achat de 250 € ou plus en vous inscrivant à notre newsletter.</p>
+        </div>
+        <form>
+            <input type="text">
+            <button type="submit" class="btn btn-primary btn-medium">S'inscrire</button>
+        </form>
+        <p>En vous abonnant, vous acceptez de recevoir nos communications  promotionnelles par e-mail. Vous pouvez vous désinscrire à tout moment  en utilisant le lien dans l'un de nos courriels marketing, ou demander à accéder, rectifier ou supprimer vos données.</p>
 
+    </section>
+
+    <section class="faq">
+        
+        <h2>Questions fréquement posées</h2>
+
+        <div class="faq-container">
+            @for (faqItem of faqItems; track $index) {
+                <div class="faq-element" (click)="toggleFaq(faqItem)">
+                    <div class="faq-question" >
+                        <h3>{{faqItem.question}}</h3>
+                        <i class="bi" [ngClass]="faqItem.isExpanded ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+                    </div>
+                    <p class="faq-answer" [ngClass]="faqItem.isExpanded ? 'expanded' : 'collapsed'">{{faqItem.answer}}</p>
+                </div>
+            }
+        </div>
+
+    </section>
 </section>
