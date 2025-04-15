@@ -1,0 +1,54 @@
+
+
+<h1>Votre panier</h1>
+
+
+<div>
+    <h2 class="price">
+        Le montant de votre panier s'élève à {{ cartPrice | number:'1.2-2' }}&nbsp;€
+    </h2>
+</div>
+
+<section class="items-section"> 
+    @for (cartItem of cartItems; track $index) {
+
+        <div class="cart-item">
+            <app-product-card [product]="cartItem.product"/>
+            <div class="quantity-container">
+                <i class="bi bi-dash-circle-fill" (click)="cartService.decrementQuantity(cartItem)"></i>
+                <p>{{cartItem.quantity}}</p>
+                <i class="bi bi-plus-circle-fill" (click)="cartService.incrementQuantity(cartItem)"></i>
+            </div>
+        </div>
+       <!--  <div class="cart-item">
+            <img src="{{apiUrl}}/public/images/product/{{cartItem.product.id}}/main" alt="">
+            <div class="container">
+        
+                <h3>{{cartItem.product.name}}</h3>
+                <h3>{{cartItem.product.price | number:'1.2-2'}}€</h3>
+                <div class="quantity-container">
+                    <i class="bi bi-dash-circle-fill" (click)="cartService.decrementQuantity(cartItem)"></i>
+                    <p>{{cartItem.quantity}}</p>
+                    <i class="bi bi-plus-circle-fill" (click)="cartService.incrementQuantity(cartItem)"></i>
+                </div>
+            </div>
+        </div> -->
+
+    }
+</section>
+
+
+
+@if (cartItems.length === 0) {
+    <p class="no-items-text">Les éléments que vous ajoutez seront affichés ici, <span class="back-to-home" routerLink="" >continuez votre shopping</span> </p>
+    <div class="recommended">
+        <app-product-showcase-list title="Recommandés pour vous"/> 
+    </div>
+
+} @else {
+    <div class="recommended">
+        <app-product-showcase-list title="Vous pourriez aimer"/> 
+    </div>
+}
+
+

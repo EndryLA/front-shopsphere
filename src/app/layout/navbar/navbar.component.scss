@@ -4,7 +4,7 @@ header {
     display:flex;
     width:100%;
     justify-content: space-between;
-    padding:8px 16px;
+    padding:8px 32px;
     box-sizing: border-box;
 }
 
@@ -25,4 +25,17 @@ ul {
 .logo {
     width:50px;
     cursor: pointer;
+}
+
+.bi {
+    font-size:28px;
+}
+
+.cart-icon {
+    position:relative;
+}
+
+.cart-items {
+    position:absolute;
+
 }

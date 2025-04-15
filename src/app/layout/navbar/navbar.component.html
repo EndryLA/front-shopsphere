@@ -5,13 +5,14 @@
             <li routerLink="">Nos Produits</li>
             <li routerLink="">Link 2</li>
             <li routerLink="">Link 3</li>
-            <li routerLink="connexion">
+            <li >
                 @if (isLogedIn) {
-                    <button class="btn btn-medium btn-primary" (click)="logout()">Déconnexion</button>
+                    <i class="bi bi-power" (click)="logout()"></i>
                 } @else {
-                    <button class="btn btn-medium btn-primary">Se connecter</button>
+                    <i class="bi bi-person-fill" routerLink="connexion"></i>
                 }
             </li>
+            <li routerLink="panier"><i class="bi bi-bag-fill cart-icon"></i><span class="cart-items">({{totalQuantity}})</span></li>
         </ul>
     </nav>
 </header>

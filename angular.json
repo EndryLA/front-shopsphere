@@ -34,7 +34,8 @@
             "styles": [
               "src/styles.scss",
               "src/app/shared/styles/buttons.scss",
-              "src/app/shared/styles/forms.scss"
+              "src/app/shared/styles/forms.scss",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": []
           },

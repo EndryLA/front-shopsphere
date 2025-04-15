@@ -9,6 +9,7 @@ import { ImageService } from '../../services/image.service';
 import { environment } from '../../../environments/environment.development';
 import { catchError, finalize, forkJoin, of } from 'rxjs';
 import { ProductImageViewerComponent } from "../../shared/components/product-image-viewer/product-image-viewer.component";
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-product-detail-page',
@@ -18,7 +19,6 @@ import { ProductImageViewerComponent } from "../../shared/components/product-ima
   styleUrl: './product-detail-page.component.scss'
 })
 export class ProductDetailPageComponent implements OnInit {
-  // Properties
   product!: Product;
   productId!: number;
   productImages: Image[] = [];
@@ -26,14 +26,13 @@ export class ProductDetailPageComponent implements OnInit {
   isLoading = true;
   errorMessage: string | null = null;
 
-  // Services via dependency injection
   private productService = inject(ProductService);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private imageService = inject(ImageService);
+  public cartService = inject(CartService)
 
   ngOnInit(): void {
-    // Get the product ID from the route parameters
     this.productId = +this.route.snapshot.params['id'];
     
     if (isNaN(this.productId) || this.productId <= 0) {
@@ -41,6 +40,9 @@ export class ProductDetailPageComponent implements OnInit {
       this.router.navigate(['/products']);
       return;
     }
+
+
+
 
     // Use forkJoin to make parallel API calls
     forkJoin({

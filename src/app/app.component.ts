@@ -22,7 +22,6 @@ export class AppComponent implements OnInit{
       this.productService.getProducts().subscribe({
         next:(response) => {
           this.products = response.content
-          console.log(response.content)
         },
         error:(error) => console.log(error)
       })
