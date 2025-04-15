@@ -1,20 +1,34 @@
 <section class="product-slider">
-    <div class="upper-section">
-        <h2>{{title}}</h2>
-        <div class="btn-container">
-            <button class="btn btn-swiper" ><img src="/assets/icons/chevron-left.svg" alt="navigate-left"></button>
-            <button class="btn btn-swiper" ><img src="/assets/icons/chevron-right.svg" alt="navigate-right" ></button>
-        </div>
+  <div class="upper-section">
+    <h2>{{title}}</h2>
+    <div class="btn-container">
+      <button class="btn btn-swiper" (click)="slidePrev()">
+        <img src="/assets/icons/chevron-left.svg" alt="navigate-left">
+      </button>
+      <button class="btn btn-swiper" (click)="slideNext()">
+        <img src="/assets/icons/chevron-right.svg" alt="navigate-right">
+      </button>
     </div>
-    <swiper-container 
+  </div>
+
+  <swiper-container 
+    #swiperContainer
     id="swiper"
     slides-per-view="4" 
     loop="true"
-      >
+    navigation="false">
+    @if (isLoading) {
+      @for (item of skeletonArray; track $index) {
+        <swiper-slide>
+          <app-product-card-skeleton></app-product-card-skeleton>
+        </swiper-slide>
+      }
+    } @else {
       @for (product of products; track product.id) {
         <swiper-slide>
           <app-product-card [product]="product"></app-product-card>
         </swiper-slide>
       }
-    </swiper-container>
-  </section>
+    }
+  </swiper-container>
+</section>
