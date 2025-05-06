@@ -3,10 +3,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProductDetailPageComponent } from './pages/product-detail-page/product-detail-page.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { AccountPageComponent } from './pages/account-page/account-page.component';
 
 export const routes: Routes = [
     {path:'connexion',component:LoginComponent},
     {path:'',component:HomepageComponent},
     {path:'produit/:id', component:ProductDetailPageComponent},
-    {path:'panier', component:CartPageComponent}
+    {path:'panier', component:CartPageComponent},
+    {path:'mon-compte', component:AccountPageComponent}
+
 ];
