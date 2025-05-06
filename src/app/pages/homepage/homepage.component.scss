@@ -4,6 +4,29 @@ section.flex-container {
     gap:88px;
 }
 
+.hero-section {
+
+    height:500px;
+    display: flex;
+    align-items: center;
+    padding-left:15%;
+
+
+    background-image: url("/assets/images/hero-img.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+   
+    
+    .hero-content {
+        max-width:550px;
+        display:flex;
+        flex-direction: column;
+        gap:24px;
+    }
+
+}
+
 .category-section {
     max-width:1248px;
     margin:0 auto;

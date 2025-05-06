@@ -7,11 +7,16 @@
             <li routerLink="">Link 3</li>
             <li >
                 @if (isLogedIn) {
-                    <i class="bi bi-power" (click)="logout()"></i>
+                    <i class="bi bi-person-fill" routerLink="mon-compte"></i>
                 } @else {
                     <i class="bi bi-person-fill" routerLink="connexion"></i>
                 }
             </li>
+            @if (isLogedIn) {
+            <li>
+                <i class="bi bi-power" (click)="logout()"></i>
+            </li>
+            }
             <li routerLink="panier"><i class="bi bi-bag-fill cart-icon"></i><span class="cart-items">({{totalQuantity}})</span></li>
         </ul>
     </nav>

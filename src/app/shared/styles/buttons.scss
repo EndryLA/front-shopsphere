@@ -7,10 +7,26 @@
     font-weight:600;
 }
 
+.btn-rounded {
+    background-color: unset;
+    border: none;
+    outline:none;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    border-radius:8px;
+}
+
 .btn-medium {
     width:140px;
     font-size:16px;
     padding:10px;
+}
+
+.btn-lg {
+    width:280px;
+    font-size:18px;
+    padding:12px;
 }
 
 .btn-xxl {
