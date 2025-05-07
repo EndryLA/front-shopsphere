@@ -39,3 +39,12 @@ ul {
     position:absolute;
 
 }
+
+.category-navigation {
+    display:flex;
+    justify-content: center;
+
+    ul li {
+        font-weight:600;
+    }
+}

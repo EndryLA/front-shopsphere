@@ -5,11 +5,12 @@ import { ProductCardComponent } from "./shared/components/product-card/product-c
 import { Product } from './interfaces/Product';
 import { ProductService } from './services/products.service';
 import { ProductShowcaseListComponent } from "./shared/components/product-showcase-list/product-showcase-list.component";
+import { FooterComponent } from "./layout/footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, ProductShowcaseListComponent],
+  imports: [RouterOutlet, NavbarComponent, ProductShowcaseListComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
