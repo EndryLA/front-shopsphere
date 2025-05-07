@@ -1,0 +1,33 @@
+footer {
+
+    background-color: #F2F2F2;
+    padding:48px 0 8px 0;
+    margin-top:140px;
+
+    .container {
+        display:flex;
+        gap:16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-section {
+        width:200px;
+
+        ul li {
+            margin:6px 0;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .copyright-notice {
+        text-align: center;
+        font-size:14px;
+        margin-top:20px;
+    }
+
+}

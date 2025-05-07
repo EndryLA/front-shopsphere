@@ -72,6 +72,9 @@ section.flex-container {
 
         input {
             width:400px;
+            border-radius: 6px;
+            padding:0 16px;
+            font-size:18px;
         }
     }
 }
@@ -138,9 +141,15 @@ section.flex-container {
     justify-content: center;
     max-width:1248px;
     gap:32px;
+    overflow:hidden;
 
     img {
         width:100%;
+        transition:.3s;
+
+        &:hover {
+            transform: scale(1.01);
+        }
     }
 
     @media screen and (max-width:600){
